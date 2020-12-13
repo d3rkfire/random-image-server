@@ -1,7 +1,8 @@
 const http = require("http");
 const fs = require("fs");
 
-const dir = ""; // Put the directory path of your image folder here
+var dir = ""; // Put the directory path of your image folder here
+if (!dir.endsWith("/")) dir += "/"; // Just in case
 fs.readdir(dir, (err, files) => {
     // Error
     if (err) {
